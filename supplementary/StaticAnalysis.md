@@ -659,7 +659,7 @@
   </tr>
   <tr>
     <th colspan="5" valign="middle" align="center">Average</th>
-    <td valign="middle" align="center">6.65%</td>
+    <td valign="middle" align="center">14.39%</td>
   </tr>
 </table>
 </html>
