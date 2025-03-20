@@ -29,7 +29,7 @@ echo $'fileName:Line' > targets  # Replace with actual file/line info
 ```
 3.2 Run Static Analysis
 ```
-~/windranger/instrument/bin/cbi --targets=targets program.bc
+~/pdgf/instrument/bin/cbi --targets=targets program.bc
 ```
 3.3 Record Precondition Metrics
 
@@ -37,11 +37,11 @@ Note: Capture the reported precondition region count for subsequent steps
 
 4. Generate Instrumented Binary
 ```
-~/pdgf/afl-clang-fast program.bc -o program.ci
+~/pdgf/fuzz/afl-clang-fast program.bc -o program.ci
 ```
 5. Fuzzing Execution
 ```
-~/pdgf/afl-fuzz -i in/ -o out -e 10693 ./program.ci @@
+~/pdgf/fuzz/afl-fuzz -i in/ -o out -e 10693 ./program.ci @@
 ```
 Critical Parameters:
 -e: Precondition edge count (from Step 3.3)
